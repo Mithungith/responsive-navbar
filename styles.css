@@ -60,6 +60,9 @@ nav {
      width: 400px;
      text-align:center;
  }
+ .nav-mobile-parent{
+  display: none;
+ }
 /*-----------||----------*/
 @media (max-width: 768px) {
   .hero-section{
@@ -67,6 +70,7 @@ nav {
   }
   .nav-mobile-parent{
    position: absolute;
+   display: block;
   }
   .nav-mobile-container {
     display: flex;
