@@ -46,31 +46,35 @@ nav {
   height: 2px;
   background-color: grey;
 }
- /*-----------|Hero Section|----------*/
- .hero-section{
+/*-----------|Hero Section|----------*/
+.hero-section {
   width: 100%;
-  height:85vh;
-  background-color:aquamarine;
+  height: 85vh;
+  background-color: aquamarine;
   display: grid;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
- }
- .hero-content{
-     width: 400px;
-     text-align:center;
- }
- .nav-mobile-parent{
+}
+.hero-content {
+  width: 400px;
+  text-align: center;
+}
+.nav-mobile-parent {
   display: none;
- }
+}
 /*-----------||----------*/
 @media (max-width: 768px) {
-  .hero-section{
+  /* .hero-section {
+  } */
+  .hero-section {
     position: relative;
+    height: 78vh;
+    overflow-y: hidden;
   }
-  .nav-mobile-parent{
-   position: absolute;
-   display: block;
+  .nav-mobile-parent {
+    position: absolute;
+    display: block;
   }
   .nav-mobile-container {
     display: flex;
@@ -93,6 +97,10 @@ nav {
     font-size: 1.5rem;
     color: white;
   }
+  .hero-content {
+    width: 80vw;
+    text-align: center;
+  }
   .nav-mobile-container ul li {
     padding: 10px;
     transition: background-color 300ms ease-in-out;
@@ -105,7 +113,13 @@ nav {
   }
   nav {
     box-shadow: 0 0 10px grey;
-    padding: 0 3rem;
+    padding: 0 1rem;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 22vh;
   }
   .bars {
     display: block;
@@ -122,7 +136,7 @@ nav {
     position: relative;
     z-index: 100;
     cursor: pointer;
-    transform: scale(.7);
+    transform: scale(0.7);
   }
   .bars::after {
     position: absolute;
@@ -133,38 +147,38 @@ nav {
     border: 3px solid #ffc0a1;
     animation: hamburger_plus 1s ease infinite;
   }
+}
+.bars span {
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: #d24d0b;
+  z-index: -1;
+  transition: transform 200ms ease-in;
+  margin: 4px;
+}
+.active-bars span:nth-child(2) {
+  display: none;
+}
+.active-bars span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.active-bars span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+.translate-item {
+  transform: translateX(0);
+}
+.displayNone {
+  display: none;
+}
+@keyframes hamburger_plus {
+  0% {
+    opacity: 1;
+    transform: scale(1);
   }
-  .bars span {
-    height:2px;
-    width: 30px;
-    position: relative;
-    background-color: #d24d0b;
-    z-index: -1;
-    transition: transform 200ms ease-in;
-    margin: 4px;
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
   }
-  .active-bars span:nth-child(2) {
-    display: none;
-  }
-  .active-bars span:nth-child(1) {
-    transform: translateY(5px) rotate(45deg);
-  }
-  .active-bars span:nth-child(3) {
-    transform: translateY(-5px) rotate(-45deg);
-  }
-  .translate-item {
-    transform: translateX(0);
-  }
-  .displayNone {
-    display: none;
-  }
-  @keyframes hamburger_plus {
-    0% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(1.4);
-    }
 }
