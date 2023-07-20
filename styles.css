@@ -67,7 +67,7 @@ nav {
 @media (max-width: 768px) {
   .hero-section {
     position: relative;
-    height: 78vh;
+    height: 85vh;
     overflow-y: hidden;
   }
   .nav-mobile-parent {
@@ -117,7 +117,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 22vh;
+    height: 15vh;
   }
   .bars {
     display: block;
